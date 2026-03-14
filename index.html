@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIRMACS — Open-source Rust infrastructure for agentic AI</title>
+  <meta name="description" content="We build the servers, coding agents, and search layers that let AI agents actually do work.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+      --accent2: #f78166;
+      --muted: #8b949e;
+      --card: #161b22;
+      --border: #30363d;
+      --green: #3fb950;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo { font-size: 1.3rem; font-weight: 800; color: var(--accent); text-decoration: none; letter-spacing: 2px; }
+    nav .links { display: flex; gap: 1.5rem; }
+    nav .links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    nav .links a:hover { color: var(--fg); }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+    .hero h1 { font-size: 3.5rem; color: var(--fg); margin-bottom: 0.5rem; letter-spacing: 4px; }
+    .hero .tagline { font-size: 1.2rem; color: var(--muted); margin-bottom: 2.5rem; }
+
+    .projects {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    .projects h2 { color: var(--fg); margin-bottom: 0.5rem; font-size: 1.1rem; }
+    .projects .section-label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem; margin-top: 2.5rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card h3 { color: var(--accent); font-size: 1rem; margin-bottom: 0.3rem; }
+    .card h3 a { color: inherit; text-decoration: none; }
+    .card .lang { font-size: 0.7rem; color: var(--accent2); margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.82rem; }
+    .card .links-row { margin-top: 0.6rem; display: flex; gap: 0.8rem; }
+    .card .links-row a { color: var(--accent); font-size: 0.75rem; text-decoration: none; }
+
+    .methodology {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      text-align: center;
+    }
+    .methodology h2 { margin-bottom: 1rem; }
+    .phases {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .phase {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      color: var(--green);
+    }
+    .phase .arrow { color: var(--muted); margin-left: 0.5rem; }
+    .methodology p { color: var(--muted); font-size: 0.85rem; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      nav { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">DIRMACS</a>
+    <div class="links">
+      <a href="https://github.com/dirmacs">GitHub</a>
+      <a href="https://dirmacs.github.io/pawan">Pawan Docs</a>
+      <a href="https://www.dirmacs.com">Website</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>DIRMACS</h1>
+    <p class="tagline">Open-source Rust infrastructure for agentic AI</p>
+  </div>
+
+  <section class="projects">
+    <p class="section-label">Core Runtime</p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/ares">ares</a></h3>
+        <div class="lang">Rust</div>
+        <p>Agentic AI server. Multi-provider LLM, tool calling, RAG, MCP, multi-tenant metering, OpenAI-compatible API.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/eruka">eruka</a></h3>
+        <div class="lang">Rust</div>
+        <p>Context intelligence engine. Structured business knowledge, workspace isolation, 13 MCP tools.</p>
+      </div>
+    </div>
+
+    <p class="section-label">Developer Tools</p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/pawan">pawan</a></h3>
+        <div class="lang">Rust &middot; 9.4K LOC &middot; 107 tests</div>
+        <p>Self-healing CLI coding agent. 18 commands, 17 tools, streaming TUI, AI commit/review/explain/test. Named after Power Star Pawan Kalyan.</p>
+        <div class="links-row">
+          <a href="https://dirmacs.github.io/pawan">docs</a>
+          <a href="https://github.com/dirmacs/pawan">source</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/aegis">aegis</a></h3>
+        <div class="lang">Rust</div>
+        <p>Declarative config management. TOML manifests that generate tool configs for the entire stack.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/daedra">daedra</a></h3>
+        <div class="lang">Rust</div>
+        <p>Web search MCP server. DuckDuckGo-powered, real-time search and page fetching for agents.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/nimakai">nimakai</a></h3>
+        <div class="lang">Nim</div>
+        <p>NVIDIA NIM model latency benchmarker. Ping, tool-use, and agent task timing across all NIM models.</p>
+      </div>
+    </div>
+
+    <p class="section-label">Platform</p>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/thulp">thulp</a></h3>
+        <div class="lang">Rust</div>
+        <p>Execution Context Engineering. Skills, memory protocols, environment awareness for agents.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/dui">dui</a></h3>
+        <div class="lang">Rust &middot; Leptos WASM</div>
+        <p>Component library for Leptos frontends. 29 accessible components, on crates.io.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="methodology">
+    <h2>DTrain</h2>
+    <div class="phases">
+      <span class="phase">DSprint<span class="arrow">&rarr;</span></span>
+      <span class="phase">DBuild<span class="arrow">&rarr;</span></span>
+      <span class="phase">DLaunch<span class="arrow">&rarr;</span></span>
+      <span class="phase">DWatch<span class="arrow">&rarr;</span></span>
+      <span class="phase">DTune<span class="arrow">&rarr;</span></span>
+      <span class="phase">DGrow<span class="arrow">&circlearrowright;</span></span>
+    </div>
+    <p>Our circular methodology for taking any operation from manual to autonomous. DIRMACS is its own first client.</p>
+  </section>
+
+  <footer>
+    <p><a href="https://github.com/dirmacs">github.com/dirmacs</a> &middot; <a href="https://www.dirmacs.com">dirmacs.com</a> &middot; <a href="mailto:contact@dirmacs.com">contact@dirmacs.com</a></p>
+  </footer>
+</body>
+</html>
