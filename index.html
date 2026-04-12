@@ -114,7 +114,9 @@
     <a href="/" class="logo">DIRMACS</a>
     <div class="links">
       <a href="https://github.com/dirmacs">GitHub</a>
-      <a href="https://dirmacs.github.io/pawan">Pawan Docs</a>
+      <a href="https://dirmacs.github.io/pawan">Pawan</a>
+      <a href="https://dirmacs.github.io/aegis">Aegis</a>
+      <a href="https://dirmacs.github.io/dstack">dstack</a>
       <a href="https://www.dirmacs.com">Website</a>
     </div>
   </nav>
@@ -143,8 +145,8 @@
     <div class="grid">
       <div class="card">
         <h3><a href="https://github.com/dirmacs/deagle">deagle</a></h3>
-        <div class="lang">Rust &middot; 4 crates &middot; 7 languages &middot; tree-sitter</div>
-        <p>Code intelligence. 7 language parsers, 4 search modes, MCP server. Indexes 94-file projects in 2.2s. Single binary, no Docker.</p>
+        <div class="lang">Rust &middot; 4 crates &middot; 9 languages &middot; tree-sitter + SQLite</div>
+        <p>Code intelligence. 9 language parsers (Rust, Python, Go, TS, JS, Java, C, C++, Ruby), 5 search modes, MCP server. Embeds as a library — no subprocess, no Docker.</p>
         <div class="links-row"><a href="https://dirmacs.github.io/deagle">docs</a> <a href="https://github.com/dirmacs/deagle">source</a></div>
       </div>
     </div>
@@ -152,18 +154,30 @@
     <p class="section-label">Developer Tools</p>
     <div class="grid">
       <div class="card">
-        <h3><a href="https://github.com/dirmacs/pawan">pawan</a></h3>
-        <div class="lang">Rust &middot; 12K+ LOC &middot; 372 tests</div>
-        <p>Self-healing CLI coding agent. 29 tools (AST + LSP), tiered registry, auto-install. Hybrid local MLX + cloud inference. Named after Power Star Pawan Kalyan.</p>
+        <h3><a href="https://dirmacs.github.io/pawan">pawan</a></h3>
+        <div class="lang">Rust &middot; 12K+ LOC &middot; 643+ tests</div>
+        <p>Self-healing CLI coding agent. 34 tools (AST + LSP + deagle embedded), tiered registry, auto-install. Local llama.cpp / MLX / Ollama + NIM cloud fallback. Compiler-as-auditor.</p>
         <div class="links-row">
           <a href="https://dirmacs.github.io/pawan">docs</a>
           <a href="https://github.com/dirmacs/pawan">source</a>
         </div>
       </div>
       <div class="card">
-        <h3><a href="https://github.com/dirmacs/aegis">aegis</a></h3>
-        <div class="lang">Rust</div>
-        <p>Declarative config management. TOML manifests that generate tool configs for the entire stack.</p>
+        <h3><a href="https://dirmacs.github.io/aegis">aegis</a></h3>
+        <div class="lang">Rust &middot; 6 crates</div>
+        <p>Declarative config management. TOML manifests, symlink deploy, drift detection (<code>aegis watch</code>), encrypted secrets, overlay networking, toolchain orchestration.</p>
+        <div class="links-row"><a href="https://dirmacs.github.io/aegis">docs</a> <a href="https://github.com/dirmacs/aegis">source</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://dirmacs.github.io/doltclaw">doltclaw</a></h3>
+        <div class="lang">Rust &middot; 2.9MB binary</div>
+        <p>Minimal agent runtime for direct NIM/NVIDIA inference. Zero built-in tools — consumers register their own. 10 deps. Single binary.</p>
+        <div class="links-row"><a href="https://dirmacs.github.io/doltclaw">docs</a> <a href="https://github.com/dirmacs/doltclaw">source</a></div>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/dirmacs/doltares">doltares</a></h3>
+        <div class="lang">Rust &middot; Axum</div>
+        <p>Orchestration daemon. Loop management API (<code>/api/loops/start</code>), DAG workflows, scheduled tasks, pawan/ares integration.</p>
       </div>
       <div class="card">
         <h3><a href="https://dirmacs.github.io/daedra">daedra</a></h3>
